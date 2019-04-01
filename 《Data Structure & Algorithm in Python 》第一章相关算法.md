@@ -11,13 +11,13 @@ def if_in(data):
     if j < len(data):
         return j
     else:
-        return 'no'
+        return False
 
 def if_in(data)
     for j in len(data):
        if data[j] == 'X':
            return j
-     return 'no'
+     return False
 ```
 
 ## 寻找目标在序列中的出现次数 p23
