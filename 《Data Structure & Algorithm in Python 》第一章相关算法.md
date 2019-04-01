@@ -51,7 +51,7 @@ def find_max2(data):
             
 ```
 
-## 对数据蓄力集合中的所有条目都乘以某个值 P25
+## 对数据集合序列中的所有条目都乘以某个值 P25
 ```python
 #方法一：
 def scale(data, factor):
