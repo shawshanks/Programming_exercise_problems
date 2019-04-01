@@ -49,5 +49,15 @@ def find_max2(data):
             big_index = i
     return data[big_index]
             
+```
 
+## 对数据蓄力集合中的所有条目都乘以某个值 P25
+```python
+#方法一：
+def scale(data, factor):
+    for i in range(len(data)):
+        data[i] *= factor
+        
+#方法二：使用列表推导式
+[data[i] * factor for i in range(len(data))]
 ```
