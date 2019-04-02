@@ -87,3 +87,16 @@ def factor_while(n):
     if k * k == n:
         result.append(k)
  ```
+ 
+ ##Fibonacci数列的生成器完成 p41
+ ```python
+ ## 会产生无限斐波那契数列
+ def fibonacci():
+    a , b = 0, 1
+    while True:
+        yield a 
+        future = a + b
+        a = b 
+        b = future         # yield语句后面可以替换为： a, b = b, a+b
+        
+ ```
