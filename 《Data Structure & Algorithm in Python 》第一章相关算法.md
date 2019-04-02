@@ -73,7 +73,7 @@ def factors(n):
     return result
  
 # 方法2： 列表推导式
-result = [k for k in range(1, n+1) if n % k == 0]
+result = [k for k in range(1, n+1) if n % k == 0] # 在P43 1.9.2节中出现
     
  # 方法3： while 循环
 def factor_while(n):
@@ -88,7 +88,7 @@ def factor_while(n):
         result.append(k)
  ```
  
- ##Fibonacci数列的生成器完成 p41
+ ## Fibonacci数列的生成器完成 p41
  ```python
  ## 会产生无限斐波那契数列
  def fibonacci():
