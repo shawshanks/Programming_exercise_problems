@@ -97,9 +97,9 @@ def factor_while(n):
         yield a 
         future = a + b
         a = b 
-        b = future         # yield语句后面可以替换为： a, b = b, a+b
-        
+        b = future         # yield语句后面 的a,b互换值可以使用simultaneous assignment来简化代码
  ```
+ `a, b = b, a+b`
  
  ## 使用解析式（comprehension）语法计算一系列值的和，节省内存 P43
  ```python
