@@ -99,7 +99,13 @@ def factor_while(n):
         a = b 
         b = future         # yield语句后面 的a,b互换值可以使用simultaneous assignment来简化代码
  ```
- `a, b = b, a+b`
+ ```python
+  def fibonacci():
+    a , b = 0, 1
+    while True:
+        yield a 
+        a, b = b, a+b      # 见P45
+ ```
  
  ## 使用解析式（comprehension）语法计算一系列值的和，节省内存 P43
  ```python
