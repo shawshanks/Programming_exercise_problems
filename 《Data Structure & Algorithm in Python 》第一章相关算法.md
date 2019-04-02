@@ -61,3 +61,29 @@ def scale(data, factor):
 #方法二：使用列表推导式
 [data[i] * factor for i in range(len(data))]
 ```
+
+## 寻找某个数的因数 p40
+```python
+#方法1: for 循环
+def factors(n):
+    result = []
+    for k in range(1, n):
+        if n % k == 0:
+            result.append(k)
+    return result
+ 
+# 方法2： 列表推导式
+result = [k for k in range(1, n+1) if n % k == 0]
+    
+ # 方法3： while 循环
+def factor_while(n):
+    result = []
+    k = 1
+    while k * k < n:
+        if n % k == 0:
+            result.append(k)
+            result.append(n // k)
+            k += 1
+    if k * k == n:
+        result.append(k)
+ ```
