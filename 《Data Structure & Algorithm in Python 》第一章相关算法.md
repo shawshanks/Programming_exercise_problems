@@ -101,7 +101,7 @@ def factor_while(n):
         
  ```
  
- ## 使用解析式（comprehension）语法计算一系列值的和，节省内存
+ ## 使用解析式（comprehension）语法计算一系列值的和，节省内存 
  ```python
  total = sum(k * k for k in range(1, n+1))
  ####################################################################
