@@ -25,10 +25,10 @@ Python-course中说，generator是一个返回 generator object的函数。
 我们可以写一个generator函数，然后将所在模块导入解释器中：
 ```python
 def generator():
-	i = 0
-	while Ture:
-		yield i
-		i += 1
+    i = 0
+    while Ture:
+        yield i
+        i += 1
 ```
 
 ```Python
