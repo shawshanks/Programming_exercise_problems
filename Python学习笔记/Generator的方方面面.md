@@ -7,6 +7,42 @@
   - [term-generator](https://docs.python.org/zh-cn/3.7/glossary.html#term-generator)
   
 -------------------------------
+# 迭代器
+[9.8. 迭代器](https://docs.python.org/zh-cn/3.7/tutorial/classes.html#iterators)
+>在幕后，for 语句会调用容器对象中的 iter()。 该函数返回一个定义了 __next__() 方法的迭代器对象，该方法将逐一访问容器中的元素。 当元素用尽时，__next__() 将引发 StopIteration 异常来通知终止 for 循环。 你可以使用 next() 内置函数来调用 __next__() 方法.
+
+> 看过迭代器协议的幕后机制，给你的类添加迭代器行为就很容易了。 定义一个 __iter__() 方法来返回一个带有 __next__() 方法的对象。 如果类已定义了 __next__()，则 __iter__() 可以简单地返回 self:
+```python
+class Reverse:
+    """Iterator for looping over a sequence backwards."""
+    def __init__(self, data):
+        self.data = data
+        self.index = len(data)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index == 0:
+            raise StopIteration
+        self.index = self.index - 1
+        return self.data[self.index]
+>>>
+>>> rev = Reverse('spam')
+>>> iter(rev)
+<__main__.Reverse object at 0x00A1DB50>
+>>> for char in rev:
+...     print(char)
+...
+m
+a
+p
+s
+```
+与生成器之间的关系
+> 可以用生成器来完成的操作同样可以用前一节所描述的基于类的迭代器来完成。 但生成器的写法更为紧凑，因为它会自动创建 __iter__() 和 __next__() 方法。
+
+
 # 生成器Generator
 ## 生成器是什么？
 官方教程文档:
@@ -33,7 +69,12 @@ def generator():
 
 ```Python
 >>> from new1 import generator
+>>> generator
+<function generator at 0x033B94F8>
 >>> a = generator()
 >>> a
 <generator object generator at 0x03328D70>
 ```
+## 生成器对象generator object
+Python-course
+>  This generator object can be seen like a function which produces a sequence of results instead of a single object. This sequence of values is produced by iterating over it, e.g. with a for loop. The values, on which can be iterated, are created by using the yield statement. The value created by the yield statement is the value following the yield keyword. 
