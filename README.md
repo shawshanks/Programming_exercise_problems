@@ -12,6 +12,8 @@
 证明:
 <image src="https://github.com/shawshanks/Programming_exercise_problems/blob/master/Picture/%E9%98%B6%E4%B9%98%E4%B8%8E%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0%E6%AF%94%E8%BE%83.jpg" width="70%">
 
+# 递归
+
 # 数据结构及算法分类
 ## 数据结构
 ### 基于数组的序列（Array-Based Sequence）
