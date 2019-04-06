@@ -3,6 +3,8 @@
 ## 内容包括
 1. 平时遇到的算法题
 2. [《Data Structure & Algorithm in Python 》](https://book.douban.com/subject/10607365/)一书中的算法
+<img src = "https://github.com/shawshanks/Programming_exercise_problems/blob/master/Picture/Data%20Structure%20%26%20algorithm%20in%20Python.jpg" width = "20%">
+
 3. [算法4](https://book.douban.com/subject/19952400/)中的算法
 
 <img src="https://github.com/shawshanks/Programming_exercise_problems/blob/master/Picture/%E7%AE%97%E6%B3%954.jpg "  width="20%"  >
