@@ -26,11 +26,12 @@ n/2 -1.5 = n//2 -1
 """
 
 
-def siftup(array, i):
+def siftup(array, i, endpos=None):
     left = 2 * i + 1
     right = 2 * i + 2
     smallest = i
-    endpos = len(array)
+    if endpos is None:
+        endpos = len(array)
     # 确定 父节点,左子节点,右子节点 中值为最小的节点的索引
     if left < endpos and array[i] > array[left]:
         smallest = left
@@ -39,7 +40,7 @@ def siftup(array, i):
     # 确保父节点的值为最小的节点
     if smallest != i:
         array[i], array[smallest] = array[smallest], array[i]
-        siftup(array, smallest)
+        siftup(array, smallest, endpos)
 
 
 def min_heapfy(array):
@@ -48,18 +49,33 @@ def min_heapfy(array):
         siftup(array, i)
 
 
-def heap_sort(array):
-    min_heapfy(array)
-    sorted_array = []
-    for _ in range(len(array)):
-        array[0], array[-1] = array[-1], array[0]   # 根节点是最小值
-        sorted_array.append(array.pop())            # 弹出最小值
-        siftup(array, 0)                            # 将根节点堆化
+# def heap_sort(array):
+#     min_heapfy(array)
+#     sorted_array = []
+#     for _ in range(len(array)):
+#         array[0], array[-1] = array[-1], array[0]   # 根节点是最小值
+#         sorted_array.append(array.pop())            # 弹出最小值
+#         siftup(array, 0)                            # 将根节点堆化
 
-    return sorted_array
+#     return sorted_array
+
+
+def heap_sort_in_place(array):
+    min_heapfy(array)
+    print('min_heapfy array', array)
+    for i in reversed(range(len(array))):
+        array[0], array[i] = array[i], array[0]
+        print('exchange first and end', array)
+        endpos = i
+        print(endpos)
+        siftup(array, 0, endpos)
+        print(array)
+
+    return array
 
 
 if __name__ == '__main__':
     list = [2, 4, 5, 1, 7, 3]
-    sorted_list = heap_sort(list)
-    print(sorted_list)
+    # min_heapfy(list)
+    # print(list)
+    print(heap_sort_in_place(list))
