@@ -1,5 +1,11 @@
 [6 steps to understanding a heap with Python](https://towardsdatascience.com/data-structure-heap-23d4c78a6962)
 # heap 堆
+## 本文内容
+1. 堆定义 或性质
+2. 堆高度实现
+3. 堆完成算法 Python实现
+4. 堆排序 实现
+
 ## 堆定义
 堆（英语：Heap）是计算机科学中的一种特别的树状数据结构。若是满足以下特性，即可称为堆：“给定堆中任意节点 P 和 C，若 P 是 C 的母节点，那么 P 的值会小于等于（或大于等于） C 的值”。若母节点的值恒小于等于子节点的值，此堆称为最小堆（min heap）；反之，若母节点的值恒大于等于子节点的值，此堆称为最大堆（max heap）。在堆中最顶端的那一个节点，称作根节点（root node），根节点本身没有母节点（parent node）。
 
